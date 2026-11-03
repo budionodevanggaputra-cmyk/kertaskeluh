@@ -1,0 +1,64 @@
+/* FILE: css/blocks/support.css */
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  color: var(--color-panel-ink);
+}
+
+.support__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.support__intro {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  opacity: 0.9;
+}
+
+.support__card {
+  background-color: var(--color-line);
+  padding: var(--space-3);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.support__service {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.support__action-btn {
+  text-align: center;
+  margin-top: var(--space-1);
+}
+
+.support__site-link {
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  align-self: flex-start;
+  color: var(--color-accent);
+}
+
+.support__emergency {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.support__disclaimer {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  opacity: 0.65;
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-2);
+}
+
+.support__close-btn {
+  width: 100%;
+}

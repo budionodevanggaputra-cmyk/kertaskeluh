@@ -1,0 +1,9 @@
+/* FILE: css/blocks/stage.css */
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-stage);
+  overflow: hidden;
+  background-color: var(--color-scene-fallback);
+}

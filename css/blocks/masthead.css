@@ -1,0 +1,70 @@
+/* FILE: css/blocks/masthead.css */
+.masthead {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: var(--z-hud);
+  pointer-events: none;
+  user-select: none;
+}
+
+.masthead__brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead__title {
+  font-family: var(--font-ui);
+  font-weight: 900;
+  font-size: clamp(4rem, 12vw, 11rem);
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead__line--first {
+  display: block;
+}
+
+.masthead__line--second {
+  display: block;
+  transform: translateX(clamp(1.5rem, 5vw, 4.5rem));
+}
+
+.masthead__tagline {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  color: var(--color-ink);
+  margin-top: var(--space-3);
+  display: inline-block;
+  background-color: var(--color-panel);
+  border: var(--border-thick) solid var(--color-ink);
+  padding: var(--space-1) var(--space-2);
+  box-shadow: var(--shadow-hard-sm);
+  transform: rotate(-1.5deg);
+}
+
+@media (max-width: 720px) {
+  .masthead {
+    top: var(--space-2);
+    left: var(--space-2);
+  }
+
+  .masthead__title {
+    font-size: clamp(2.5rem, 11vw, 4.5rem);
+    line-height: 0.88;
+  }
+
+  .masthead__line--second {
+    transform: translateX(1.5rem);
+  }
+
+  .masthead__tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+  }
+}

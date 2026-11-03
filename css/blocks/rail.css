@@ -1,0 +1,93 @@
+/* FILE: css/blocks/rail.css */
+.rail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: var(--z-hud);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background-color: var(--color-panel);
+  border-right: var(--border-thick) solid var(--color-ink);
+  border-top: var(--border-thick) solid var(--color-ink);
+  border-bottom: var(--border-thick) solid var(--color-ink);
+  padding: var(--space-3) var(--space-2);
+  box-shadow: var(--shadow-hard);
+}
+
+.rail__button {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  padding: var(--space-3) var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.rail__indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) 0;
+  border-top: var(--border-thick) solid var(--color-ink);
+  border-bottom: var(--border-thick) solid var(--color-ink);
+  user-select: none;
+}
+
+.rail__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.rail__status-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 720px) {
+  .rail {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-right: none;
+    border-bottom: none;
+    border-top: var(--border-thick) solid var(--color-ink);
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .rail__button {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .rail__indicator {
+    flex-direction: row;
+    border-top: none;
+    border-bottom: none;
+    border-left: var(--border-thick) solid var(--color-ink);
+    border-right: var(--border-thick) solid var(--color-ink);
+    padding: 0 var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .rail__status-text {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+}

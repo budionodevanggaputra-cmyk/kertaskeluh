@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('https://per404.vercel.app/assets/fonts/PPNeueMontreal-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: #f2f2f2;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #070912;
+  touch-action: none;
+}
+
+.work-menu {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 30;
+  background: rgb(242 242 242 / 92%);
+  backdrop-filter: blur(12px);
+}
+
+.work-menu nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+}
+
+.nav-link {
+  justify-self: start;
+  color: #0f0f15;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-link:last-child {
+  justify-self: end;
+}
+
+.nav-link span {
+  display: inline-block;
+}
+
+.nav-letter {
+  position: relative;
+  pointer-events: none;
+  animation: nav-letter-enter 300ms cubic-bezier(0.33, 1, 0.68, 1) both;
+  animation-delay: calc(var(--letter-index) * 100ms);
+}
+
+.nav-letter .nav-letter-scramble {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes nav-letter-enter {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-letter {
+    animation: none;
+  }
+}
+
+.brand-link {
+  display: block;
+  width: 120px;
+  max-width: 36vw;
+  aspect-ratio: 261 / 28;
+  transition: opacity 200ms;
+}
+
+.brand-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-link:hover {
+  opacity: 0.7;
+}
+
+.home-link {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.home-link:focus-visible {
+  z-index: 40;
+  bottom: 24px;
+  left: 50%;
+  width: auto;
+  height: auto;
+  padding: 12px 24px;
+  transform: translateX(-50%);
+  clip-path: none;
+  border-radius: 30px;
+  background: #16161f;
+  color: white;
+}
+
+#gallery {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

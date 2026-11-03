@@ -1,0 +1,22 @@
+/* FILE: css/base/typography.css */
+body {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-hero-ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+button,
+input,
+label {
+  font-family: var(--font-ui);
+}

@@ -1,0 +1,110 @@
+/* FILE: css/blocks/note-card.css */
+.note-card {
+  position: absolute;
+  width: 280px;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: var(--radius-note);
+  border: 1.5px solid rgba(15, 23, 42, 0.14);
+  box-shadow: 3px 3px 0 #CBD5E1;
+  color: var(--color-note-ink);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transform: rotate(var(--note-rotation, 0deg));
+  transform-origin: center center;
+  cursor: grab;
+  user-select: text;
+  z-index: 5;
+  animation: note-card-enter 300ms var(--ease-calm);
+}
+
+@keyframes note-card-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) rotate(var(--note-rotation, 0deg));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--note-rotation, 0deg));
+  }
+}
+
+.note-card--fresh {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.note-card--dragging {
+  cursor: grabbing;
+  z-index: 50;
+  box-shadow: 6px 6px 0 var(--color-overlay);
+}
+
+.note-card--butter {
+  background-color: var(--note-butter);
+}
+
+.note-card--rose {
+  background-color: var(--note-rose);
+}
+
+.note-card--sky {
+  background-color: var(--note-sky);
+}
+
+.note-card--sage {
+  background-color: var(--note-sage);
+}
+
+.note-card--lilac {
+  background-color: var(--note-lilac);
+}
+
+.note-card__stamp {
+  align-self: flex-end;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #334155;
+  transform: rotate(calc(var(--note-rotation, 0deg) * -1.5));
+  user-select: none;
+}
+
+.note-card__image {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.note-card__body {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-note-ink);
+  word-break: break-word;
+  overflow-y: auto;
+}
+
+.note-card__body ul,
+.note-card__body ol {
+  padding-left: 1.2rem;
+  margin: 0.25rem 0;
+}
+
+.note-card__body li {
+  margin-bottom: 0.15rem;
+}
+
+.note-card__body strong,
+.note-card__body b {
+  font-weight: 700;
+}
+
+.note-card__body em,
+.note-card__body i {
+  font-style: italic;
+}

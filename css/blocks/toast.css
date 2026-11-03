@@ -1,0 +1,36 @@
+/* FILE: css/blocks/toast.css */
+.toast {
+  position: fixed;
+  top: clamp(16px, 4vh, 32px);
+  right: clamp(16px, 4vw, 40px);
+  z-index: var(--z-toast);
+  background-color: var(--color-panel);
+  color: var(--color-panel-ink);
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 12px 20px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transform: rotate(0.5deg);
+  max-width: 360px;
+  line-height: 1.4;
+}
+
+.toast[hidden] {
+  display: none;
+}
+
+.toast--error {
+  border-color: var(--color-accent);
+}
+
+@media (max-width: 720px) {
+  .toast {
+    top: 12px;
+    right: 12px;
+    left: 12px;
+    max-width: calc(100vw - 24px);
+    transform: none;
+  }
+}

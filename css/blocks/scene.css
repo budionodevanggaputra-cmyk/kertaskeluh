@@ -1,0 +1,41 @@
+/* FILE: css/blocks/scene.css */
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-scene);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scene__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-scene-fallback);
+  background-image: url("../../assets/scene.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.scene__tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-scene-tint);
+  opacity: var(--scene-tint-opacity);
+  transition: opacity 400ms var(--ease-calm);
+}
+
+@media (max-width: 720px) {
+  .scene__image {
+    background-position: 68% 100%;
+  }
+}

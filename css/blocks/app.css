@@ -1,0 +1,16 @@
+/* FILE: css/blocks/app.css */
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-frame);
+  padding: clamp(10px, 2.5vw, 40px);
+  position: relative;
+  transition: background-color 400ms var(--ease-calm), color 400ms var(--ease-calm);
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 8px;
+  }
+}

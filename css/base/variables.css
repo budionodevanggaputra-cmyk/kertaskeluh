@@ -1,0 +1,135 @@
+/* FILE: css/base/variables.css */
+:root {
+  --color-frame: #CBD5E1;
+  --color-scene-fallback: #FFFFFF;
+  --color-scene-tint: #FFFFFF;
+  --scene-tint-opacity: 0;
+  --color-hero-ink: #0A0F1D;
+  --color-pill: #FFFFFF;
+  --color-pill-ink: #0F172A;
+  --color-pill-active: #F1F5F9;
+  --color-cta: #0F172A;
+  --color-cta-ink: #FFFFFF;
+  --color-mint: #D1FAE5;
+  --color-mint-ink: #064E3B;
+  --color-panel: #FFFFFF;
+  --color-panel-ink: #0F172A;
+  --color-line: #E2E8F0;
+  --color-overlay: #000000;
+  --color-accent: #E5A335;
+  --color-accent-ink: #0A0F1D;
+  --color-grid-dot: #94A3B8;
+  --grid-opacity: 0.15;
+  --shadow-note: 3px 3px 0 #CBD5E1;
+  --shadow-card: 4px 4px 0 #94A3B8;
+
+  --color-note-ink: #0A0F1D;
+  --note-butter: #FEF08A;
+  --note-rose: #FECDD3;
+  --note-sky: #BAE6FD;
+  --note-sage: #BBF7D0;
+  --note-lilac: #E9D5FF;
+
+  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Plus Jakarta Sans", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-hand: "Patrick Hand", "Caveat", "Segoe Print", cursive;
+
+  --radius-pill: 999px;
+  --radius-stage: 14px;
+  --radius-panel: 16px;
+  --radius-card: 12px;
+  --radius-note: 10px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+  --space-5: 64px;
+  --space-6: 128px;
+
+  --z-scene: 1;
+  --z-canvas: 2;
+  --z-hero: 3;
+  --z-hud: 4;
+  --z-composer: 20;
+  --z-modal: 50;
+  --z-toast: 100;
+
+  --ease-calm: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  --view-x: 0px;
+  --view-y: 0px;
+  --view-scale: 1;
+}
+
+[data-theme="day"] {
+  --color-frame: #CBD5E1;
+  --color-scene-fallback: #FFFFFF;
+  --color-scene-tint: #FFFFFF;
+  --scene-tint-opacity: 0;
+  --color-hero-ink: #0A0F1D;
+  --color-pill: #FFFFFF;
+  --color-pill-ink: #0F172A;
+  --color-pill-active: #F1F5F9;
+  --color-cta: #0F172A;
+  --color-cta-ink: #FFFFFF;
+  --color-mint: #D1FAE5;
+  --color-mint-ink: #064E3B;
+  --color-panel: #FFFFFF;
+  --color-panel-ink: #0F172A;
+  --color-line: #E2E8F0;
+  --color-overlay: #000000;
+  --color-accent: #E5A335;
+  --color-accent-ink: #0A0F1D;
+  --color-grid-dot: #94A3B8;
+  --grid-opacity: 0.15;
+  --shadow-note: 3px 3px 0 #CBD5E1;
+  --shadow-card: 4px 4px 0 #94A3B8;
+
+  --color-note-ink: #0A0F1D;
+  --note-butter: #FEF08A;
+  --note-rose: #FECDD3;
+  --note-sky: #BAE6FD;
+  --note-sage: #BBF7D0;
+  --note-lilac: #E9D5FF;
+}
+
+[data-theme="night"] {
+  --color-frame: #4B6262;
+  --color-scene-fallback: #10213F;
+  --color-scene-tint: #E6EEE8;
+  --scene-tint-opacity: 0;
+  --color-hero-ink: #F6F3EC;
+  --color-pill: #FFFFFF;
+  --color-pill-ink: #1B2A3A;
+  --color-pill-active: #E4EEEA;
+  --color-cta: #3A5B86;
+  --color-cta-ink: #FFFFFF;
+  --color-mint: #A8DAC4;
+  --color-mint-ink: #1F3B3A;
+  --color-panel: #172746;
+  --color-panel-ink: #F6F3EC;
+  --color-line: #2F4468;
+  --color-overlay: #0B1730;
+  --color-accent: #F2B84B;
+  --color-accent-ink: #1B2A3A;
+  --color-grid-dot: #FFFFFF;
+  --grid-opacity: 0.14;
+  --shadow-note: 3px 3px 0 #0C1830;
+
+  --note-butter: #D8C886;
+  --note-rose: #D4A79F;
+  --note-sky: #9DBBCB;
+  --note-sage: #A9C3A2;
+  --note-lilac: #BCB2CF;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}

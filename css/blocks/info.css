@@ -1,0 +1,71 @@
+/* FILE: css/blocks/info.css */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  color: var(--color-panel-ink);
+}
+
+.info__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.info__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.info__section-title {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-panel-ink);
+}
+
+.info__text {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+.info__list {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+.info__list-item {
+  margin-bottom: 4px;
+}
+
+.info__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.info__table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.info__table td:first-child {
+  font-weight: 500;
+  width: 35%;
+}
+
+.info__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.info__close-btn {
+  width: 100%;
+  margin-top: var(--space-2);
+}

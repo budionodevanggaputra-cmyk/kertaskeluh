@@ -1,0 +1,54 @@
+/* FILE: css/blocks/editor.css */
+.editor {
+  position: relative;
+  width: 100%;
+}
+
+.editor__field {
+  min-height: 140px;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+  font-family: var(--font-hand);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-panel-ink);
+  outline: none;
+  word-break: break-word;
+  transition: background-color 200ms var(--ease-calm);
+}
+
+.editor__field[data-color="butter"] { background-color: var(--note-butter); color: var(--color-note-ink); }
+.editor__field[data-color="rose"] { background-color: var(--note-rose); color: var(--color-note-ink); }
+.editor__field[data-color="sky"] { background-color: var(--note-sky); color: var(--color-note-ink); }
+.editor__field[data-color="sage"] { background-color: var(--note-sage); color: var(--color-note-ink); }
+.editor__field[data-color="lilac"] { background-color: var(--note-lilac); color: var(--color-note-ink); }
+
+.editor__field:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.editor__field:empty::before {
+  content: attr(data-placeholder);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #475569;
+  opacity: 0.85;
+  pointer-events: none;
+  display: block;
+}
+
+.editor__field ul,
+.editor__field ol {
+  padding-left: 1.2rem;
+  margin: 0.25rem 0;
+}
+
+.editor__field li {
+  margin-bottom: 0.15rem;
+}

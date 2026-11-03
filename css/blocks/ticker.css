@@ -1,0 +1,60 @@
+/* FILE: css/blocks/ticker.css */
+.ticker {
+  position: absolute;
+  bottom: clamp(14px, 2.5vh, 28px);
+  right: clamp(14px, 2.5vw, 28px);
+  z-index: var(--z-hud);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #FFFFFF;
+  border-radius: var(--radius-card);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  padding: 16px 20px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  user-select: none;
+}
+
+.ticker__count {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #E2E8F0;
+}
+
+.ticker__price {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #FDE047;
+}
+
+.ticker__badge {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid #FDE047;
+  color: #FDE047;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@media (max-width: 720px) {
+  .ticker {
+    display: none;
+  }
+}

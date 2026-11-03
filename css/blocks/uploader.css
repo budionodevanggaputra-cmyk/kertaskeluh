@@ -1,0 +1,51 @@
+/* FILE: css/blocks/uploader.css */
+.uploader {
+  border: 1.5px dashed var(--color-line);
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+  text-align: center;
+  transition: border-color 200ms var(--ease-calm), background-color 200ms var(--ease-calm);
+}
+
+.uploader--dragover {
+  border-style: solid;
+  border-color: var(--color-accent);
+  background-color: var(--color-line);
+}
+
+.uploader__prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.uploader__helper {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-panel-ink);
+  opacity: 0.75;
+}
+
+.uploader__preview-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.uploader__preview-wrap[hidden] {
+  display: none;
+}
+
+.uploader__preview-image {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.uploader__remove-button {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+}

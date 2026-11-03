@@ -1,0 +1,91 @@
+/* FILE: css/blocks/button.css */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  user-select: none;
+  transition: background-color 200ms var(--ease-calm), color 200ms var(--ease-calm), opacity 200ms var(--ease-calm);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.button--pill {
+  background-color: var(--color-pill);
+  color: var(--color-pill-ink);
+}
+
+.button--pill:hover:not(:disabled) {
+  background-color: var(--color-pill-active);
+}
+
+.button--cta {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  border: 1.5px solid #0F172A;
+  box-shadow: 2.5px 2.5px 0 #94A3B8;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  transition: transform 150ms var(--ease-calm), box-shadow 150ms var(--ease-calm);
+}
+
+.button--cta:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3.5px 3.5px 0 #94A3B8;
+}
+
+.button--accent {
+  background-color: var(--color-accent);
+  color: var(--color-accent-ink);
+  font-weight: 600;
+}
+
+.button--accent:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.button--secondary {
+  background-color: var(--color-line);
+  color: var(--color-panel-ink);
+}
+
+.button--secondary:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.button--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-panel-ink);
+}
+
+.button--outline:hover:not(:disabled) {
+  background-color: var(--color-line);
+}
+
+.button--icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 1.25rem;
+  background-color: transparent;
+}
+
+.button--danger {
+  background-color: #D3453E;
+  color: #FFFFFF;
+}
+
+.button--danger:hover:not(:disabled) {
+  opacity: 0.92;
+}

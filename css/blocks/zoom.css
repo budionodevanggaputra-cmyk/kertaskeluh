@@ -1,0 +1,114 @@
+/* FILE: css/blocks/zoom.css */
+.zoom {
+  position: absolute;
+  bottom: clamp(14px, 2.5vh, 28px);
+  left: clamp(14px, 2.5vw, 28px);
+  z-index: var(--z-hud);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #0F172A;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+  min-height: 44px;
+}
+
+.zoom__button {
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-pill-ink);
+  cursor: pointer;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms var(--ease-calm);
+}
+
+.zoom__button:hover:not(:disabled) {
+  background-color: var(--color-pill-active);
+}
+
+.zoom__button--disabled,
+.zoom__button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.zoom__button--nav {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  font-weight: 500;
+}
+
+.zoom__readout {
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-pill-ink);
+  cursor: pointer;
+  background: transparent;
+  min-width: 48px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms var(--ease-calm);
+}
+
+.zoom__readout:hover {
+  background-color: var(--color-pill-active);
+}
+
+.zoom__divider {
+  width: 1px;
+  height: 18px;
+  background-color: var(--color-pill-active);
+  margin: 0 2px;
+}
+
+.zoom__button--fit {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .zoom {
+    bottom: 64px;
+    left: 12px;
+    padding: 3px 6px;
+    min-height: 44px;
+  }
+
+  .zoom__button {
+    min-height: 38px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .zoom__readout {
+    min-height: 38px;
+  }
+
+  .zoom__button--fit {
+    display: none;
+  }
+
+  .zoom__divider {
+    display: none;
+  }
+}

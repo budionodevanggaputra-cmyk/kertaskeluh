@@ -1,0 +1,221 @@
+/* FILE: css/blocks/composer.css */
+.composer {
+  position: fixed;
+  top: clamp(10px, 3vh, 40px);
+  left: clamp(10px, 3vw, 40px);
+  width: 440px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - clamp(20px, 6vh, 80px));
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #0F172A;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-panel);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  z-index: var(--z-composer);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.composer[hidden] {
+  display: none;
+}
+
+.composer__inner {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  gap: var(--space-3);
+  overflow-y: auto;
+}
+
+.composer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composer__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-panel-ink);
+}
+
+.composer__close {
+  color: var(--color-panel-ink);
+  opacity: 0.7;
+}
+
+.composer__close:hover {
+  opacity: 1;
+}
+
+.composer__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.composer__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-panel-ink);
+  opacity: 0.8;
+}
+
+.composer__swatches {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.composer__swatch {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  border: 2px solid var(--color-line);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 150ms var(--ease-calm), border-color 150ms var(--ease-calm), box-shadow 150ms var(--ease-calm);
+}
+
+.composer__swatch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.composer__swatch--butter {
+  background-color: var(--note-butter);
+}
+
+.composer__swatch--rose {
+  background-color: var(--note-rose);
+}
+
+.composer__swatch--sky {
+  background-color: var(--note-sky);
+}
+
+.composer__swatch--sage {
+  background-color: var(--note-sage);
+}
+
+.composer__swatch--lilac {
+  background-color: var(--note-lilac);
+}
+
+.composer__swatch--selected {
+  outline: 2.5px solid var(--color-cta);
+  outline-offset: 3px;
+  transform: scale(1.12);
+  border-color: #FFFFFF;
+}
+
+.composer__counter-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.composer__counter {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.composer__care {
+  background-color: var(--color-mint);
+  color: var(--color-mint-ink);
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.composer__care[hidden] {
+  display: none;
+}
+
+.composer__care-text {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.composer__care-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composer__care-btn {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+}
+
+.composer__care-dismiss {
+  font-size: 1.25rem;
+  background: transparent;
+  color: var(--color-mint-ink);
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 0 4px;
+}
+
+.composer__care-dismiss:hover {
+  opacity: 1;
+}
+
+.composer__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-3);
+}
+
+.composer__price-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composer__price-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.composer__price-value {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.composer__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.composer__submit-btn {
+  width: 100%;
+}
+
+.composer__cancel-btn {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .composer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+}
